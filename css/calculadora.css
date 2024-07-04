@@ -1,15 +1,10 @@
-<<<<<<< HEAD
-
-=======
 @font-face {
     font-family: 'MiFuentePersonalizada';
     src: url('/css/Digital\ Regular.ttf') format('woff'), /* Modern Browsers */
          url('nombreDeArchivoFuente.ttf') format('truetype'); /* Safari, Android, iOS */
 }
-body{
-<<<<<<< HEAD
-    font-family: 'MiFuentePersonalizada'; 
-}
+body{  font-family: 'MiFuentePersonalizada'; }
+
 main{
     display: flex;
     justify-content: center;
@@ -22,8 +17,3 @@ main{
     background: -webkit-linear-gradient(to bottom, #2C5364, #203A43, #0F2027);  /* Chrome 10-25, Safari 5.1-6 */
     background: linear-gradient(to bottom, #2C5364, #203A43, #0F2027); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
 }
-=======
-    font-family: 'MiFuentePersonalizada';
-}
->>>>>>> 4e7a18787b19f2fd4f38e8bf660fe837d1ffc50a
->>>>>>> cc56d7594f4c81220d602f5dbdcb3bfbe05fa9fc
