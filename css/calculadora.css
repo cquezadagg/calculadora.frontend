@@ -1,3 +1,8 @@
-#operaciones {
-    padding: 0;
+@font-face {
+    font-family: 'MiFuentePersonalizada';
+    src: url('/css/Digital\ Regular.ttf') format('woff'), /* Modern Browsers */
+         url('nombreDeArchivoFuente.ttf') format('truetype'); /* Safari, Android, iOS */
+}
+body{
+    font-family: 'MiFuentePersonalizada';
 }
