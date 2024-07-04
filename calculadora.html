@@ -28,8 +28,10 @@
           <div class="row py-1">
             <div class="col-3"><button type="button" class="btn btn-outline-danger" onclick="borrar()"> C </button>
             </div>
-            <div class="col-3"><button type="button" class="btn btn-outline-warning"> MC</button></div>
-            <div class="col-3"><button type="button" class="btn btn-outline-light" onclick="mostrarValores('%')"> %
+            <div class="col-3"><button type="button" class="btn btn-outline-warning" onclick="delNum2()"> MC</button>
+            </div>
+            <div class="col-3"><button type="button" class="btn btn-outline-light"
+                onclick="mostrarValores('%'); porcentaje();"> %
               </button></div>
             <div class="col-3"><button type="button" class="btn btn-outline-light"
                 onclick="mostrarValores('/');   division()"> / </button></div>
@@ -54,7 +56,7 @@
             <div class="col-3"><button type="button" class="btn btn-outline-info" onclick="mostrarValores('6')"> 6
               </button></div>
             <div class="col-3"><button type="button" class="btn btn-outline-light"
-                onclick="mostrarValores('-');   resta()" id="btnresta"> - </button></div>
+                onclick="mostrarValores('-');   resta()"> - </button></div>
           </div>
           <!-- 1 - 2 - 3 - + -->
           <div class="row py-1">
@@ -73,8 +75,10 @@
               </button></div>
             <div class="col-3"><button type="button" class="btn btn-outline-info" onclick="mostrarValores('00')">
                 00</button></div>
-            <div class="col-3"><button type="button" class="btn btn-outline-light"> . </button></div>
-            <div class="col-3"><button type="button" class="btn btn-outline-success" onclick="calcular();"> = </button>
+            <div class="col-3"><button type="button" class="btn btn-outline-light" onclick="mostrarValores('.')"> .
+              </button></div>
+            <div class="col-3"><button type="button" class="btn btn-outline-success" onclick="calcular();"> =
+              </button>
             </div>
           </div>
         </section>

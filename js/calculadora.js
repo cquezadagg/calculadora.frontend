@@ -8,14 +8,12 @@ function mostrarValores(valor) {
 }
 
 function borrar() {
-  // Establece el valor del input a 0
   document.getElementById('salida').value = '0';
 }
 
 let num1 = "";
 let num2 = "";
 let operador = "";
-
 
 function suma() {
   num1 = document.getElementById("salida").value;
@@ -41,6 +39,15 @@ function division() {
   borrar();
 }
 
+function porcentaje() {
+  num1 = document.getElementById("salida").value;
+  operador = "%";
+  borrar();
+}
+function delNum2() {
+  let salida = document.getElementById("salida");
+  salida.value = 0
+}
 function calcular() {
   num2 = document.getElementById("salida").value;
   let resultado = 0;
@@ -61,6 +68,9 @@ function calcular() {
         alert("No se puede dividir por cero");
         return;
       }
+      break;
+    case "%":
+      resultado = parseFloat(num1) % parseFloat(num2);
       break;
     default:
       alert("Operador no válido");
