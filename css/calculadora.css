@@ -4,8 +4,7 @@
          url('nombreDeArchivoFuente.ttf') format('truetype'); /* Safari, Android, iOS */
 }
 body{
-    font-family: 'MiFuentePersonalizada';
-    background-color: rgb(49, 51, 56);
+    font-family: 'MiFuentePersonalizada'; 
 }
 main{
     display: flex;
