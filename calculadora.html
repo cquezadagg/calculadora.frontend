@@ -5,69 +5,71 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="css/calculadora.css" <title>Calculadora Web</title>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
     <link rel="stylesheet" href="/css/calculadora.css">
-    <title>Calculadora Web</title>
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
-        integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
 </head>
 
 <body class="bg-dark">
         <!-- cuerpo de la calculadora -->
         <main class="container-sm" id="calcBody">
-            <!-- visor de la calculadora -->
+            <div class="row p-1 bg-dark justify-content-center pb-4 rounded" id="calculadora">
+                <div class="col-10">
+                    <!-- visor de la calculadora -->
             <section>
-                <div id="salida" class="display-salida"></div>
+                <div class="display-salida py-4 text-center">
+                    <label for="salida" class="bold text-white pb-2" disabled>Calculadora WEB</label>
+                    <input type="text" id="salida" readonly value="0">
+                </div>
                 <!-- EN CONSTRUCCION     -->
             </section>
             <section>
                 <!-- c -ac -% -/ -->
-                <div class="row">
-                    <div class="col-3"><button type="button" value="" onclick="borrar()">C</button></div>
-                    <div class="col-3"><button type="button" value="">MC</button></div>
-                    <div class="col-3"><button type="button" value="" onclick="mostrarValores('%')">%</button></div>
-                    <div class="col-3"><button type="button" value="" onclick="mostrarValores('/')">/</button></div>
+                <div class="row py-1">
+                    <div class="col-3"><button type="button" class="btn btn-outline-danger"     onclick="borrar()"              > C </button></div>
+                    <div class="col-3"><button type="button" class="btn btn-outline-warning"                                    > MC</button></div>
+                    <div class="col-3"><button type="button" class="btn btn-outline-light"      onclick="mostrarValores('%')"   > % </button></div>
+                    <div class="col-3"><button type="button" class="btn btn-outline-light"      onclick="mostrarValores('/');   dividir()"      > / </button></div>
                 </div>
                 <!-- 7 - 8 - 9 - * -->
-                <div class="row">
-                    <div class="col-3"><button type="button" value="" onclick="mostrarValores('7')">7</button></div>
-                    <div class="col-3"><button type="button" value="" onclick="mostrarValores('8')">8</button></div>
-                    <div class="col-3"><button type="button" value="" onclick="mostrarValores('9')">9</button></div>
-                    <div class="col-3"><button type="button" value="" onclick="mostrarValores('*')">*</button></div>
+                <div class="row py-1">
+                    <div class="col-3"><button type="button" class="btn btn-outline-info"       onclick="mostrarValores('7')"   > 7 </button></div>
+                    <div class="col-3"><button type="button" class="btn btn-outline-info"       onclick="mostrarValores('8')"   > 8 </button></div>
+                    <div class="col-3"><button type="button" class="btn btn-outline-info"       onclick="mostrarValores('9')"   > 9 </button></div>
+                    <div class="col-3"><button type="button" class="btn btn-outline-light"      onclick="mostrarValores('*');   multiplicar()"  > * </button></div>
                 </div>
                 <!-- 4 - 5 - 6 - - -->
-                <div class="row">
-                    <div class="col-3"><button type="button" value="" onclick="mostrarValores('4')">4</button></div>
-                    <div class="col-3"><button type="button" value="" onclick="mostrarValores('5')">5</button></div>
-                    <div class="col-3"><button type="button" value="" onclick="mostrarValores('6')">6</button></div>
-                    <div class="col-3"><button type="button" value="" onclick="mostrarValores('-')">-</button></div>
+                <div class="row py-1">
+                    <div class="col-3"><button type="button" class="btn btn-outline-info"       onclick="mostrarValores('4')"   > 4 </button></div>
+                    <div class="col-3"><button type="button" class="btn btn-outline-info"       onclick="mostrarValores('5')"   > 5 </button></div>
+                    <div class="col-3"><button type="button" class="btn btn-outline-info"       onclick="mostrarValores('6')"   > 6 </button></div>
+                    <div class="col-3"><button type="button" class="btn btn-outline-light"      onclick="mostrarValores('-');   resta()"    id="btnresta"> - </button></div>
                 </div>
                 <!-- 1 - 2 - 3 - + -->
-                <div class="row">
-                    <div class="col-3"><button type="button" value="" onclick="mostrarValores('1')">1</button></div>
-                    <div class="col-3"><button type="button" value="" onclick="mostrarValores('2')">2</button></div>
-                    <div class="col-3"><button type="button" value="" onclick="mostrarValores('3')">3</button></div>
-                    <div class="col-3"><button type="button" value="" onclick="mostrarValores('+')">+</button></div>
+                <div class="row py-1">
+                    <div class="col-3"><button type="button" class="btn btn-outline-info"       onclick="mostrarValores('1')"   > 1 </button></div>
+                    <div class="col-3"><button type="button" class="btn btn-outline-info"       onclick="mostrarValores('2')"   > 2 </button></div>
+                    <div class="col-3"><button type="button" class="btn btn-outline-info"       onclick="mostrarValores('3')"   > 3 </button></div>
+                    <div class="col-3"><button type="button" class="btn btn-outline-light"      onclick="mostrarValores('+');   suma()"> + </button></div>
                 </div>
                 <!-- 0 - 00 - . - = -->
-                <div class="row">
-                    <div class="col-3"><button type="button" value="" onclick="mostrarValores('0')">0</button>      </div>
-                    <div class="col-3"><button type="button" value="" onclick="mostrarValores('00')">00</button>    </div>
-                    <div class="col-3"><button type="button" value="">.</button>                                    </div>
-                    <div class="col-3"><button type="button" value="" onclick="calcular()">=</button>               </div>
+                <div class="row py-1">
+                    <div class="col-3"><button type="button" class="btn btn-outline-info"       onclick="mostrarValores('0')"   > 0 </button></div>
+                    <div class="col-3"><button type="button" class="btn btn-outline-info"       onclick="mostrarValores('00')"  > 00</button></div>
+                    <div class="col-3"><button type="button" class="btn btn-outline-light"                                      > . </button></div>
+                    <div class="col-3"><button type="button" class="btn btn-outline-success"    onclick="calcular()"            > = </button></div>
                 </div>
             </section>
+                </div>
+            </div>
         </main>
-        <script type="text/javascript" src="js/calculadora.js"></script>
-        <script src="https://code.jquery.com/jquery-3.7.1.min.js"
-            integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
-        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
-            integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
-            crossorigin="anonymous"></script>
+
+        <!-- Script de la calculadora -->
         <script src="js/calculadora.js"></script>
+        <!-- Script del Jquery -->
+        <script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+        <!-- Script de Bootstrap -->
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
 </body>
 
 </html>

@@ -1,19 +1,38 @@
 @font-face {
     font-family: 'MiFuentePersonalizada';
-    src: url('/css/Digital\ Regular.ttf') format('woff'), /* Modern Browsers */
-         url('nombreDeArchivoFuente.ttf') format('truetype'); /* Safari, Android, iOS */
+    src: url('Calculadora.ttf') format('woff'), /* Modern Browsers */
+         url('Calculadora.ttf') format('truetype'); /* Safari, Android, iOS */
 }
-body{  font-family: 'MiFuentePersonalizada'; }
+body, input{  font-family: 'MiFuentePersonalizada' !important; }
 
 main{
     display: flex;
     justify-content: center;
     align-items: center;
     height: 100vh;
+    max-width: max-content !important;
+    padding: 1.2rem !important;
 }
 
-.container-sm{
+#calculadora{
     background: #0F2027;  /* fallback for old browsers */
     background: -webkit-linear-gradient(to bottom, #2C5364, #203A43, #0F2027);  /* Chrome 10-25, Safari 5.1-6 */
     background: linear-gradient(to bottom, #2C5364, #203A43, #0F2027); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+}
+
+button{
+    width: 3.3rem;
+}
+
+input{
+
+    text-align: right;
+    width: -webkit-fill-available;
+    height: 3rem;
+    font-weight: bold;
+    font-size: x-large;
+}
+
+.col-3{
+    width: 24% !important;
 }
