@@ -1,1 +1,12 @@
+<<<<<<< HEAD
 
+=======
+@font-face {
+    font-family: 'MiFuentePersonalizada';
+    src: url('/css/Digital\ Regular.ttf') format('woff'), /* Modern Browsers */
+         url('nombreDeArchivoFuente.ttf') format('truetype'); /* Safari, Android, iOS */
+}
+body{
+    font-family: 'MiFuentePersonalizada';
+}
+>>>>>>> 4e7a18787b19f2fd4f38e8bf660fe837d1ffc50a
