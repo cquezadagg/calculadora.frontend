@@ -1,55 +1,60 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Calculadora Web</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="css/calculadora.css" <title>Calculadora Web</title>
 </head>
+
 <body>
-    <!-- cuerpo de la calculadora -->
-    <main class="container" id="calcBody">
-        <!-- visor de la calculadora -->
-        <section id="visor">
-        <!-- EN CONSTRUCCION     -->
-        </section id="operaciones">
-        <!-- botones de la calculadora -->
-         <section>
-             <!-- c -ac -% -/ -->
-            <div class="row">
-                <div class="col-3"><button type="button" value="">C</button></div>
-                <div class="col-3"><button type="button" value="">MC</button></div>
-                <div class="col-3"><button type="button" value="">%</button></div>
-                <div class="col-3"><button type="button" value="">/</button></div>
-            </div>
-            <!-- 7 - 8 - 9 - * -->
-            <div class="row">
-                <div class="col-3"><button type="button" value="">7</button></div>
-                <div class="col-3"><button type="button" value="">8</button></div>
-                <div class="col-3"><button type="button" value="">9</button></div>
-                <div class="col-3"><button type="button" value="">*</button></div>
-            </div>
-            <!-- 4 - 5 - 6 - - -->
-            <div class="row">
-                <div class="col-3"><button type="button" value="">4</button></div>
-                <div class="col-3"><button type="button" value="">5</button></div>
-                <div class="col-3"><button type="button" value="">6</button></div>
-                <div class="col-3"><button type="button" value="">-</button></div>
-            </div>
-            <!-- 1 - 2 - 3 - + -->
-            <div class="row">
-                <div class="col-3"><button type="button" value="">1</button></div>
-                <div class="col-3"><button type="button" value="">2</button></div>
-                <div class="col-3"><button type="button" value="">3</button></div>
-                <div class="col-3"><button type="button" value="">+</button></div>
-            </div>
-            <!-- 0 - 00 - . - = -->
-            <div class="row">
-                <div class="col-3"><button type="button" value="">0</button>/div>
-                <div class="col-3"><button type="button" value="">00</button>/div>
-                <div class="col-3"><button type="button" value="">.</button>/div>
-                <div class="col-3"><button type="button" value="">=</button>/div>
-            </div>
-         </section>
-    </main>
+  <!-- cuerpo de la calculadora -->
+  <main class="container" id="calcBody">
+    <!-- visor de la calculadora -->
+    <section>
+      <div id="salida" class="display-salida"></div>
+      <!-- EN CONSTRUCCION     -->
+    </section id="operaciones">
+    <!-- botones de la calculadora -->
+    <section>
+      <!-- c -ac -% -/ -->
+      <div class="row">
+        <div class="col-3"><button type="button" value=""onclick="borrar()">C</button></div>
+        <div class="col-3"><button type="button" value="">MC</button></div>
+        <div class="col-3"><button type="button" value="" onclick="mostrarValores('%')">%</button></div>
+        <div class="col-3"><button type="button" value=""onclick="mostrarValores('/')">/</button></div>
+      </div>
+      <!-- 7 - 8 - 9 - * -->
+      <div class="row">
+        <div class="col-3"><button type="button" value=""onclick="mostrarValores('7')">7</button></div>
+        <div class="col-3"><button type="button" value=""onclick="mostrarValores('8')">8</button></div>
+        <div class="col-3"><button type="button" value=""onclick="mostrarValores('9')">9</button></div>
+        <div class="col-3"><button type="button" value=""onclick="mostrarValores('*')">*</button></div>
+      </div>
+      <!-- 4 - 5 - 6 - - -->
+      <div class="row">
+        <div class="col-3"><button type="button" value=""onclick="mostrarValores('4')">4</button></div>
+        <div class="col-3"><button type="button" value=""onclick="mostrarValores('5')">5</button></div>
+        <div class="col-3"><button type="button" value=""onclick="mostrarValores('6')">6</button></div>
+        <div class="col-3"><button type="button" value=""onclick="mostrarValores('-')">-</button></div>
+      </div>
+      <!-- 1 - 2 - 3 - + -->
+      <div class="row">
+        <div class="col-3"><button type="button" value=""onclick="mostrarValores('1')">1</button></div>
+        <div class="col-3"><button type="button" value=""onclick="mostrarValores('2')">2</button></div>
+        <div class="col-3"><button type="button" value=""onclick="mostrarValores('3')">3</button></div>
+        <div class="col-3"><button type="button" value=""onclick="mostrarValores('+')">+</button></div>
+      </div>
+      <!-- 0 - 00 - . - = -->
+      <div class="row">
+        <div class="col-3"><button type="button" value=""onclick="mostrarValores('0')">0</button>
+          <div class="col-3"><button type="button" value=""onclick="mostrarValores('00')">00</button>
+            <div class="col-3"><button type="button" value="">.</button>
+              <div class="col-3"><button type="button" value=""onclick="calcular()">=</button>
+      </div>
+    </section>
+  </main>
+  <script type="text/javascript" src="js/calculadora.js"></script>
 </body>
+
 </html>

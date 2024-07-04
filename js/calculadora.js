@@ -1,31 +1,67 @@
-document.addEventListener('DOMContentLoaded', () => {
-  let visor = document.getElementById("salida");
-
-  document.querySelectorAll('button.val-print').forEach(button => {
-    button.addEventListener('click', () => {
-      let valorBtn = button.getAttribute('value')
-      visor.innerHTML += valorBtn + '';
-    })
-  })
-})
-let num1 = document.getElementById("primerNumero");
-let num2 = document.getElementById("segundoNumero");
-
-function mostrarValores() {
+function agregarAPantalla(valorEntrada) {
+  document.getElementById("salida").innerHTML = valorEntrada;
 }
+
+function mostrarValores(numeroEntrada) {
+  let valor = document.getElementById("salida").innerHTML;
+  if (valor === "0") {
+    agregarAPantalla(numeroEntrada);
+  } else {
+    agregarAPantalla(valor + numeroEntrada);
+  }
+}
+
+function borrar() {
+  agregarAPantalla("0");
+}
+
+let num1 = "";
+let num2 = "";
+let operador = "";
+
 function suma() {
-  let resSum = parseInt(num1) + parseInt(num2);
-  document.getElementById("result").value = resSum;
+  num1 = document.getElementById("salida").innerHTML;
+  operador = "+";
+  borrar();
 }
 
 function resta() {
-  document.getElementById("result").value = parseInt(num1) - parseInt(num2);
+  num1 = document.getElementById("salida").innerHTML;
+  operador = "-";
+  borrar();
 }
 
 function multiplicar() {
-  document.getElementById("result").value = parseInt(num1) * parseInt(num2);
+  num1 = document.getElementById("salida").innerHTML;
+  operador = "*";
+  borrar();
 }
 
 function division() {
-  document.getElementById("result").value = parseInt(num1) / parseInt(num2);
+  num1 = document.getElementById("salida").innerHTML;
+  operador = "/";
+  borrar();
+}
+
+function calcular() {
+  num2 = document.getElementById("salida").innerHTML;
+  let resultado;
+  switch (operador) {
+    case "+":
+      resultado = parseFloat(num1) + parseFloat(num2);
+      break;
+    case "-":
+      resultado = parseFloat(num1) - parseFloat(num2);
+      break;
+    case "*":
+      resultado = parseFloat(num1) * parseFloat(num2);
+      break;
+    case "/":
+      resultado = parseFloat(num1) / parseFloat(num2);
+      break;
+  }
+  agregarAPantalla(resultado);
+  num1 = "";
+  num2 = "";
+  operador = "";
 }
