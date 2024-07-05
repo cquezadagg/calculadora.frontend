@@ -13,12 +13,12 @@ Para personalizar la fuente, aplicar estilos generales y específicos de la calc
 Para controlar la lógica de la calculadora, actualizar la interfaz y realizar cálculos matemáticos
 
 ## Cómo configuramos el proyecto
-1. En GIT se creó un repositorio en local con nombre “calculadora.frontend”.
+1. En GIT se creó un repositorio en local público con nombre “calculadora.frontend”.
 2. Para iniciar se crearon los archivos: `calculadora.html` `calculadora.css` `calculadora.js`
 3. En el HTML se creó todo el codigo html y el esqueleto de la calculadora. Utilizamos el sistema de cuadriculas de Bootstrap para esto. Además aquí se agregaron los enlaces CDN de Bootrap y jQuery
 5. Se trabajó el diseño de la calculadora (css-bootstrap) y el funcionamiento (javascript) de manera separada.
 6. Ibamos haciendo `git pull` cada vez que un compañero actulizaba su rama y `git push` para subir los commits individuales. Así hasta el final del trabajo
-7. Una vez tuvimos el diseño listo y la calculadora completamente funcional. Creamos un read me para comunicar información de nuestro proyecto.
+7. Una vez tuvimos el diseño listo y la calculadora completamente funcional, creamos un `README.md` para comunicar información de nuestro proyecto.
    
 
 ## Cómo ejecutar la calculadora 
