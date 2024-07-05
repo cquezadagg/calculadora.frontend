@@ -1,14 +1,16 @@
+const salida =
+document.getElementById("salida");
+
 function agregarAPantalla(valorEntrada) {
-  document.getElementById("salida").innerHTML = valorEntrada;
+  salida.innerHTML = valorEntrada;
 }
 
 function mostrarValores(valor) {
-  var salida = document.getElementById('salida');
   salida.value = salida.value === '0' ? valor : salida.value + valor;
 }
 
 function borrar() {
-  document.getElementById('salida').value = '0';
+  salida.value = '0';
 }
 
 let num1 = "";
@@ -16,40 +18,40 @@ let num2 = "";
 let operador = "";
 
 function suma() {
-  num1 = document.getElementById("salida").value;
+  num1 = salida.value;
   operador = "+";
   borrar();
 }
 
 function resta() {
-  num1 = document.getElementById("salida").value;
+  num1 = salida.value;
   operador = "-";
   borrar();
 }
 
 function multiplicar() {
-  num1 = document.getElementById("salida").value;
+  num1 = salida.value;
   operador = "*";
   borrar();
 }
 
 function division() {
-  num1 = document.getElementById("salida").value;
+  num1 = salida.value;
   operador = "/";
   borrar();
 }
 
 function porcentaje() {
-  num1 = document.getElementById("salida").value;
+  num1 = salida.value;
   operador = "%";
   borrar();
 }
 function delNum2() {
-  let salida = document.getElementById("salida");
+  let salida = salida;
   salida.value = 0
 }
 function calcular() {
-  num2 = document.getElementById("salida").value;
+  num2 = salida.value;
   let resultado = 0;
   switch (operador) {
     case "+":
@@ -76,7 +78,7 @@ function calcular() {
       alert("Operador no válido");
       return;
   }
-  document.getElementById("salida").value = resultado.toString();
+  salida.value = resultado.toString();
   // Resetea num1, num2 y operador para la próxima operación
   num1 = "";
   num2 = "";
